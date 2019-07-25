@@ -1,0 +1,22 @@
+{
+  "name": "matchpath",
+  "version": "1.0.0",
+  "description": "matchPath checks whether one or multiple paths (ex. \"/user/:id\") matches with a specified URL (ex. \"/user/2\"), and tells how it matched",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Martin Destagnol",
+  "license": "MIT",
+  "dependencies": {
+    "path-to-regexp": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/path-to-regexp": "^1.7.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}
