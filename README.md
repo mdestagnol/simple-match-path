@@ -1,6 +1,6 @@
-# matchPath
+# matchpath
 
-matchPath checks whether one or multiple paths (ex. \"/user/:id\") match with a specified URL (ex. \"/user/2\"), and tells how it matched.
+matchpath checks whether one or multiple paths (ex. \"/user/:id\") match with a specified URL (ex. \"/user/2\"), and tells how it matched.
 
 Based on matchPath function in https://github.com/ReactTraining/react-router (MIT License)
 
@@ -15,7 +15,7 @@ npm i matchpath
 ## How to use it?
 
 ```ts
-import { matchPath } from "./matchPath";
+import { matchPath } from "matchpath";
 
 const options = {
     path: "/user/:id",
