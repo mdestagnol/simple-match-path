@@ -1,4 +1,4 @@
-# matchpath
+# simple-match-path
 
 matchpath checks whether one or multiple paths (ex. \"/user/:id\") match with a specified URL (ex. \"/user/2\"), and tells how it matched.
 
@@ -15,7 +15,7 @@ npm i matchpath
 ## How to use it?
 
 ```ts
-import { matchPath } from "matchpath";
+import { matchPath } from "simple-match-path";
 
 const options = {
     path: "/user/:id",

@@ -1,5 +1,5 @@
 {
-  "name": "matchpath",
+  "name": "simple-match-path",
   "version": "1.0.0",
   "description": "matchpath checks whether one or multiple paths (ex. \"/user/:id\") match with a specified URL (ex. \"/user/2\"), and tells how it matched",
   "main": "dist/index.js",
