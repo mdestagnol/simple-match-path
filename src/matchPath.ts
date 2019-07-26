@@ -18,14 +18,14 @@ export interface Match<Params extends { [K in keyof Params]?: string } = {}> {
     params: Params;
     isExact: boolean;
     path: string;
-    url: string;
+    matchedURL: string;
 }
 
 /**
  * Public API for matching a URL pathname to a path.
  */
 export function matchPath<Params extends { [K in keyof Params]?: string } = {}>(
-    pathname: string,
+    url: string,
     options: string | MatchPathOptions = {},
 ): Match<Params> | null {
     if (typeof options === "string" || Array.isArray(options)) {
@@ -49,20 +49,20 @@ export function matchPath<Params extends { [K in keyof Params]?: string } = {}>(
             strict,
             sensitive,
         });
-        const match = regexp.exec(pathname);
+        const match = regexp.exec(url);
 
         if (!match) {
             return null;
         }
 
-        const [url, ...values] = match;
-        const isExact = pathname === url;
+        let [matchedURL, ...values] = match;
+        const isExact = url === matchedURL;
 
         if (exact && !isExact) {
             return null;
         }
 
-        const u: string = path === "/" && url === "" ? "/" : url;
+        matchedURL = path === "/" && matchedURL === "" ? "/" : matchedURL;
         const p = keys.reduce((memo, key, index) => {
             memo[key.name] = values[index];
             return memo;
@@ -70,7 +70,7 @@ export function matchPath<Params extends { [K in keyof Params]?: string } = {}>(
 
         return {
             path, // the path used to match
-            url: u, // the matched portion of the URL
+            matchedURL, // the matched portion of the URL
             isExact, // whether or not we matched exactly
             params: p as Params,
         };
