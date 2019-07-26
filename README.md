@@ -1,15 +1,13 @@
 # simple-match-path
 
-matchpath checks whether one or multiple paths (ex. \"/user/:id\") match with a specified URL (ex. \"/user/2\"), and tells how it matched.
+simple-match-path checks whether a specified URL (ex. \"/user/2\") match with a path (ex. \"/user/:id\"), and tells how it matched.
 
-Based on matchPath function in https://github.com/ReactTraining/react-router (MIT License)
-
-Extracted and ported to Typescript by Martin Destagnol
+Based on matchPath function in https://github.com/ReactTraining/react-router (MIT License). Ported to Typescript with a few modifications.
 
 ## How to install?
 
 ```bash
-npm i matchpath
+npm i simple-match-path
 ```
 
 ## How to use it?

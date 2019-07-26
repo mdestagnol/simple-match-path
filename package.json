@@ -1,11 +1,15 @@
 {
   "name": "simple-match-path",
-  "version": "1.0.0",
-  "description": "matchpath checks whether one or multiple paths (ex. \"/user/:id\") match with a specified URL (ex. \"/user/2\"), and tells how it matched",
+  "version": "1.0.1",
+  "description": "simple-match-path checks whether a specified URL (ex. \"/user/2\") match with a path (ex. \"/user/:id\"), and tells how it matched.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdestagnol/simple-match-path"
   },
   "author": "Martin Destagnol",
   "license": "MIT",
